@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct Dictonary_V2App: App {
+    @EnvironmentObject var vm: Books 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+           NavigationView{
+             HomeView()
+           }
+            .environmentObject(Books())
+            
         }
     }
 }
